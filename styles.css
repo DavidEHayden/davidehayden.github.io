@@ -462,6 +462,11 @@ h3 {
   font-size: clamp(1.8rem, 3vw, 2.7rem);
 }
 
+.research-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
 .project-details {
   display: grid;
   gap: 0.8rem;

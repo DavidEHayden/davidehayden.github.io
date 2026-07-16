@@ -6,8 +6,9 @@ const toast = document.querySelector(".toast");
 const filterButtons = document.querySelectorAll(".filter-button");
 const publications = document.querySelectorAll(".publication");
 const header = document.querySelector(".site-header");
+const currentYear = document.querySelector("#current-year");
 
-document.querySelector("#current-year").textContent = new Date().getFullYear();
+if (currentYear) currentYear.textContent = new Date().getFullYear();
 
 const savedTheme = localStorage.getItem("theme");
 const preferredDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -17,7 +18,7 @@ if (savedTheme === "dark" || (!savedTheme && preferredDark)) {
 }
 
 navToggle?.addEventListener("click", () => {
-  const isOpen = navLinks.classList.toggle("open");
+  const isOpen = navLinks?.classList.toggle("open");
   navToggle.setAttribute("aria-expanded", String(isOpen));
   navToggle.setAttribute(
     "aria-label",
@@ -27,7 +28,7 @@ navToggle?.addEventListener("click", () => {
 
 document.querySelectorAll(".nav-links a").forEach((link) => {
   link.addEventListener("click", () => {
-    navLinks.classList.remove("open");
+    navLinks?.classList.remove("open");
     navToggle?.setAttribute("aria-expanded", "false");
   });
 });
@@ -74,6 +75,6 @@ document.querySelectorAll(".copy-citation").forEach((button) => {
 
 window.addEventListener(
   "scroll",
-  () => header.classList.toggle("scrolled", window.scrollY > 8),
+  () => header?.classList.toggle("scrolled", window.scrollY > 8),
   { passive: true }
 );

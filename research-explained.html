@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="An interactive explanation of super-parameterisation, machine learning emulators, and transferability across climate models."
+  />
+  <title>Research explained | David Hayden</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="research-explained.css" />
+</head>
+
+<body class="research-page">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="Homepage">
+        <span class="brand-mark" aria-hidden="true">[DH]</span>
+        <span>David Hayden</span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="nav-links"
+        aria-label="Open navigation"
+      >
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-links" id="nav-links">
+        <a href="index.html#about">About</a>
+        <a href="index.html#research" aria-current="page">Research</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="index.html#publications">Publications</a>
+        <a href="index.html#contact">Contact</a>
+        <button class="theme-toggle" type="button" aria-label="Toggle colour theme">
+          <span aria-hidden="true">◐</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="research-hero">
+      <div class="container research-hero-inner">
+        <p class="section-kicker">Research explained</p>
+        <h1>Making the climate model's smallest scales learnable.</h1>
+        <p class="research-deck">
+          Global climate models cannot resolve every cloud and turbulent motion.
+          My research explores how super-parameterisation can provide that missing
+          detail, and how a machine learning model might eventually reproduce it
+          at a fraction of the cost.
+        </p>
+        <div class="scroll-prompt" aria-hidden="true">
+          <span class="scroll-line"></span>
+          Scroll to follow the idea
+        </div>
+      </div>
+    </section>
+
+    <section class="explainer" aria-label="Research process">
+      <div class="container explainer-layout">
+        <div class="explainer-visual-wrap">
+          <div class="explainer-visual" id="model-visual" data-stage="0">
+            <div class="visual-header">
+              <span class="visual-kicker">The modelling stack</span>
+              <span class="visual-stage" id="visual-stage">01 / 04</span>
+            </div>
+
+            <svg class="model-diagram" viewBox="0 0 640 420" role="img" aria-labelledby="diagram-title diagram-desc">
+              <title id="diagram-title">A visual explanation of the research process</title>
+              <desc id="diagram-desc">
+                The diagram changes as the reader scrolls through four stages,
+                showing a global climate model, cloud resolving models, and a
+                machine learning emulator.
+              </desc>
+              <defs>
+                <pattern id="grid-pattern" width="24" height="24" patternUnits="userSpaceOnUse">
+                  <path d="M 24 0 L 0 0 0 24" fill="none" stroke="currentColor" stroke-width="1" opacity="0.1" />
+                </pattern>
+                <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor" />
+                </marker>
+              </defs>
+
+              <rect class="diagram-bg" x="0" y="0" width="640" height="420" rx="16" />
+              <rect class="diagram-grid" x="0" y="0" width="640" height="420" rx="16" />
+
+              <g class="diagram-stage diagram-stage-0" aria-hidden="true">
+                <text class="diagram-eyebrow" x="32" y="42">STAGE 01</text>
+                <text class="diagram-title" x="32" y="70">Resolve what the GCM cannot see</text>
+                <rect class="node node-gcm" x="34" y="150" width="188" height="116" rx="12" />
+                <text class="node-label" x="56" y="187">GLOBAL CLIMATE</text>
+                <text class="node-title" x="56" y="218">GCM grid cell</text>
+                <text class="node-note" x="56" y="243">large-scale atmosphere</text>
+                <path class="diagram-arrow" d="M 234 208 C 284 208, 303 208, 347 208" marker-end="url(#arrow)" />
+                <rect class="node node-crm" x="365" y="112" width="239" height="192" rx="12" />
+                <text class="node-label" x="389" y="149">EMBEDDED DETAIL</text>
+                <text class="node-title" x="389" y="180">Cloud-resolving model</text>
+                <g class="crm-cells" transform="translate(389 204)">
+                  <rect x="0" y="0" width="28" height="28" /><rect x="34" y="0" width="28" height="28" /><rect x="68" y="0" width="28" height="28" /><rect x="102" y="0" width="28" height="28" /><rect x="136" y="0" width="28" height="28" />
+                  <rect x="0" y="34" width="28" height="28" /><rect x="34" y="34" width="28" height="28" /><rect x="68" y="34" width="28" height="28" /><rect x="102" y="34" width="28" height="28" /><rect x="136" y="34" width="28" height="28" />
+                </g>
+                <text class="node-note" x="389" y="288">clouds, convection, turbulence</text>
+              </g>
+
+              <g class="diagram-stage diagram-stage-1" aria-hidden="true">
+                <text class="diagram-eyebrow" x="32" y="42">STAGE 02</text>
+                <text class="diagram-title" x="32" y="70">Learn the unresolved physics</text>
+                <rect class="node node-input" x="34" y="138" width="150" height="140" rx="12" />
+                <text class="node-label" x="56" y="176">INPUTS</text>
+                <text class="node-title" x="56" y="208">GCM state</text>
+                <text class="node-note" x="56" y="236">temperature</text>
+                <text class="node-note" x="56" y="258">humidity · winds</text>
+                <path class="diagram-arrow" d="M 196 208 C 238 208, 254 208, 288 208" marker-end="url(#arrow)" />
+                <rect class="node node-crm" x="296" y="112" width="150" height="192" rx="12" />
+                <text class="node-label" x="318" y="149">TEACHER</text>
+                <text class="node-title" x="318" y="181">CRM</text>
+                <text class="node-note" x="318" y="226">high fidelity</text>
+                <text class="node-note" x="318" y="248">but expensive</text>
+                <path class="diagram-arrow" d="M 458 208 C 492 208, 508 208, 542 208" marker-end="url(#arrow)" />
+                <rect class="node node-output" x="550" y="138" width="58" height="140" rx="12" />
+                <text class="node-label vertical-label" x="579" y="171" transform="rotate(90 579 171)">TARGET</text>
+                <text class="node-note vertical-label" x="579" y="207" transform="rotate(90 579 207)">subgrid tendencies</text>
+              </g>
+
+              <g class="diagram-stage diagram-stage-2" aria-hidden="true">
+                <text class="diagram-eyebrow" x="32" y="42">STAGE 03</text>
+                <text class="diagram-title" x="32" y="70">Replace the expensive inner loop</text>
+                <rect class="node node-gcm" x="34" y="140" width="166" height="136" rx="12" />
+                <text class="node-label" x="57" y="178">GCM</text>
+                <text class="node-title" x="57" y="211">Large-scale state</text>
+                <text class="node-note" x="57" y="241">the model's context</text>
+                <path class="diagram-arrow" d="M 211 208 C 252 208, 268 208, 304 208" marker-end="url(#arrow)" />
+                <rect class="node node-ml" x="312" y="112" width="200" height="192" rx="12" />
+                <circle class="ml-orbit" cx="412" cy="207" r="53" />
+                <circle class="ml-core" cx="412" cy="207" r="28" />
+                <text class="ml-symbol" x="412" y="215">ML</text>
+                <text class="node-title centered" x="412" y="285">learned emulator</text>
+                <path class="diagram-arrow" d="M 524 208 L 579 208" marker-end="url(#arrow)" />
+                <text class="node-label centered" x="580" y="169">OUTPUT</text>
+                <text class="node-note centered" x="580" y="245">fast</text>
+                <text class="node-note centered" x="580" y="263">tendencies</text>
+              </g>
+
+              <g class="diagram-stage diagram-stage-3" aria-hidden="true">
+                <text class="diagram-eyebrow" x="32" y="42">STAGE 04</text>
+                <text class="diagram-title" x="32" y="70">Test transferability, not just accuracy</text>
+                <rect class="node node-ml" x="242" y="142" width="156" height="136" rx="12" />
+                <circle class="ml-core" cx="320" cy="204" r="27" />
+                <text class="ml-symbol" x="320" y="212">ML</text>
+                <text class="node-title centered" x="320" y="254">shared emulator</text>
+                <g class="gcm-target target-a">
+                  <rect class="node node-gcm" x="34" y="110" width="150" height="82" rx="12" />
+                  <text class="node-label" x="55" y="143">GCM A</text>
+                  <text class="node-note" x="55" y="168">training system</text>
+                </g>
+                <g class="gcm-target target-b">
+                  <rect class="node node-gcm" x="456" y="110" width="150" height="82" rx="12" />
+                  <text class="node-label" x="477" y="143">GCM B</text>
+                  <text class="node-note" x="477" y="168">new system</text>
+                </g>
+                <g class="gcm-target target-c">
+                  <rect class="node node-gcm" x="34" y="252" width="150" height="82" rx="12" />
+                  <text class="node-label" x="55" y="285">GCM C</text>
+                  <text class="node-note" x="55" y="310">new system</text>
+                </g>
+                <path class="transfer-arrow" d="M 184 151 C 212 151, 224 174, 242 181" marker-end="url(#arrow)" />
+                <path class="transfer-arrow" d="M 456 151 C 428 151, 416 174, 398 181" marker-end="url(#arrow)" />
+                <path class="transfer-arrow" d="M 184 293 C 212 293, 224 234, 242 226" marker-end="url(#arrow)" />
+              </g>
+            </svg>
+
+            <p class="visual-caption" id="visual-caption">A GCM provides the large-scale state; an embedded CRM supplies detail that the grid cannot resolve.</p>
+          </div>
+        </div>
+
+        <div class="explainer-steps">
+          <article class="explainer-step is-active" data-stage="0">
+            <span class="step-number">01</span>
+            <h2>Start with the scale gap</h2>
+            <p>
+              A global climate model divides the atmosphere into grid cells. The
+              cell is useful for planetary patterns, but it is too coarse to
+              explicitly represent many clouds and turbulent motions.
+            </p>
+          </article>
+
+          <article class="explainer-step" data-stage="1">
+            <span class="step-number">02</span>
+            <h2>Super-parameterisation adds a teacher</h2>
+            <p>
+              In super-parameterisation, a small cloud-resolving model (CRM) is
+              embedded inside each GCM grid column. It resolves more of the
+              physics and returns the subgrid tendencies to the larger model, but
+              running all of those CRMs is computationally demanding.
+            </p>
+          </article>
+
+          <article class="explainer-step" data-stage="2">
+            <span class="step-number">03</span>
+            <h2>Learn the CRM's behaviour</h2>
+            <p>
+              The CRM becomes a high-fidelity teacher. A machine learning emulator
+              learns the relationship between the GCM state and the CRM's
+              tendencies, with the goal of replacing the costly inner loop while
+              retaining the useful small-scale effects.
+            </p>
+          </article>
+
+          <article class="explainer-step" data-stage="3">
+            <span class="step-number">04</span>
+            <h2>Ask whether it transfers</h2>
+            <p>
+              A model that works in one climate model is not automatically useful
+              elsewhere. The final test is transferability: can the learned
+              emulator work with other GCMs, grids, resolutions, and climates
+              without losing physical credibility?
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="research-close section">
+      <div class="container research-close-inner">
+        <p class="section-kicker">The question</p>
+        <h2>Can we make high-resolution climate information both affordable and portable?</h2>
+        <p>
+          This is not only a question of prediction accuracy. It is also about
+          stability, physical behaviour, and whether one learned representation can
+          travel between the climate models that scientists actually use.
+        </p>
+        <a class="button button-primary" href="index.html#contact">Talk to me about the research</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>© <span id="current-year"></span> David Hayden.</p>
+      <p><a href="index.html">Back to profile</a></p>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+  <script src="research-explained.js"></script>
+</body>
+</html>

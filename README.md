@@ -16,6 +16,7 @@ This is a responsive, single-page academic website designed for a PhD student. I
 - `index.html` — page structure and all placeholder content
 - `styles.css` — design, mobile layout, dark mode, and print styles
 - `scripts.js` — mobile navigation, theme toggle, publication filtering, and citation copying
+- `research-explained.html`, `research-explained.css`, and `research-explained.js` — interactive research explainer page
 
 ## Replace the placeholders
 
