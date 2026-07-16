@@ -354,6 +354,13 @@ h3 {
   font-size: 1.08rem;
 }
 
+.section-intro {
+  max-width: 680px;
+  margin-bottom: 2rem;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}
+
 .status-note,
 .teaching-note {
   margin-top: 2rem;
@@ -370,6 +377,40 @@ h3 {
 
 .three-column {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.skill-group {
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.skill-group .label {
+  margin-bottom: 1rem;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.skill-list li {
+  padding: 0.4rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text-muted);
+  font-size: 0.88rem;
 }
 
 .info-card,
@@ -766,6 +807,7 @@ h3 {
 
   .profile-card-content,
   .teaching-grid,
+  .skills-grid,
   .compact-grid,
   .teaching-note {
     grid-template-columns: 1fr;
