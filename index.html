@@ -96,14 +96,14 @@
 
           <div class="hero-actions">
             <a class="button button-primary" href="#publications">View publications</a>
-            <a class="button button-secondary" href="[CV FILE OR URL]">Download CV</a>
+            <a class="button button-secondary" href="cv.docx">Download CV</a>
           </div>
 
           <div class="identity-links" aria-label="Academic profile links">
-            <a href="https://orcid.org/[YOUR-ORCID]" rel="me">ORCID</a>
-            <a href="[GOOGLE SCHOLAR URL]">Google Scholar</a>
-            <a href="https://github.com/[YOUR-GITHUB-USERNAME]">GitHub</a>
-            <a href="[LINKEDIN URL]">LinkedIn</a>
+            <a href="https://orcid.org/0009-0006-1253-9486" rel="me">ORCID</a>
+            <!-- <a href="[GOOGLE SCHOLAR URL]">Google Scholar</a> -->
+            <a href="https://github.com/DavidEHayden">GitHub</a>
+            <a href="https://linkedin.com/in/davidehayden">LinkedIn</a>
           </div>
         </div>
 
@@ -227,9 +227,8 @@
             <p class="label">Programming languages</p>
             <ul class="skill-list">
               <li>Python</li>
-              <li>JavaScript / TypeScript</li>
-              <li>HTML / CSS</li>
-              <li>SQL</li>
+              <li>Java</li>
+              <li>Fortran</li>
               <li>Bash</li>
             </ul>
           </article>
@@ -237,10 +236,9 @@
           <article class="skill-group">
             <p class="label">Development & tooling</p>
             <ul class="skill-list">
-              <li>Git & GitHub</li>
+              <li>Git & GitHub & GitLab</li>
               <li>Linux</li>
-              <li>Docker</li>
-              <li>REST APIs</li>
+              <li>Neovim</li>
               <li>CI/CD workflows</li>
             </ul>
           </article>
@@ -248,7 +246,7 @@
           <article class="skill-group">
             <p class="label">Data & research tools</p>
             <ul class="skill-list">
-              <li>Jupyter</li>
+              <li>Jupyter Lab</li>
               <li>Data analysis</li>
               <li>Scientific Python</li>
               <li>Visualisation</li>
@@ -261,8 +259,6 @@
             <ul class="skill-list">
               <li>OpenCode</li>
               <li>Model Context Protocol (MCP)</li>
-              <li>Claude Code</li>
-              <li>GitHub Copilot</li>
               <li>Cursor</li>
             </ul>
           </article>
@@ -288,68 +284,64 @@
         </div>
 
         <div class="publication-list" id="publication-list">
-          <article class="publication" data-type="journal">
-            <div class="publication-year">[2026]</div>
-            <div>
-              <p class="publication-type">Journal article</p>
-              <h3>[Title of publication]</h3>
-              <p class="publication-authors">
-                <strong>[Your Name]</strong>, [Co-author One], [Co-author Two]
-              </p>
-              <p class="publication-venue">[Journal Name], [Volume(Issue)], [Pages]</p>
-              <div class="publication-links">
-                <a href="[DOI OR PAPER URL]">Paper</a>
-                <a href="[CODE URL]">Code</a>
-                <a href="[DATA URL]">Data</a>
-                <button class="copy-citation" type="button" data-citation="[APA OR OTHER CITATION]">
-                  Copy citation
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <article class="publication" data-type="conference">
-            <div class="publication-year">[2025]</div>
-            <div>
-              <p class="publication-type">Conference paper</p>
-              <h3>[Title of conference paper]</h3>
-              <p class="publication-authors">
-                [Co-author One], <strong>[Your Name]</strong>, [Co-author Two]
-              </p>
-              <p class="publication-venue">[Conference Name], [Location]</p>
-              <div class="publication-links">
-                <a href="[PAPER URL]">Paper</a>
-                <a href="[SLIDES URL]">Slides</a>
-                <a href="[VIDEO URL]">Video</a>
-                <button class="copy-citation" type="button" data-citation="[FULL CITATION]">
-                  Copy citation
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <article class="publication" data-type="preprint">
-            <div class="publication-year">[2025]</div>
-            <div>
-              <p class="publication-type">Preprint</p>
-              <h3>[Title of working paper or preprint]</h3>
-              <p class="publication-authors"><strong>[Your Name]</strong>, [Co-author]</p>
-              <p class="publication-venue">[arXiv / repository / under review]</p>
-              <div class="publication-links">
-                <a href="[PREPRINT URL]">Preprint</a>
-                <a href="[PROJECT URL]">Project page</a>
-                <button class="copy-citation" type="button" data-citation="[FULL CITATION]">
-                  Copy citation
-                </button>
-              </div>
-            </div>
-          </article>
+          <!-- <article class="publication" data-type="journal"> -->
+          <!--   <div class="publication-year">[2026]</div> -->
+          <!--   <div> -->
+          <!--     <p class="publication-type">Journal article</p> -->
+          <!--     <h3>[Title of publication]</h3> -->
+          <!--     <p class="publication-authors"> -->
+          <!--       <strong>[Your Name]</strong>, [Co-author One], [Co-author Two] -->
+          <!--     </p> -->
+          <!--     <p class="publication-venue">[Journal Name], [Volume(Issue)], [Pages]</p> -->
+          <!--     <div class="publication-links"> -->
+          <!--       <a href="[DOI OR PAPER URL]">Paper</a> -->
+          <!--       <a href="[CODE URL]">Code</a> -->
+          <!--       <a href="[DATA URL]">Data</a> -->
+          <!--       <button class="copy-citation" type="button" data-citation="[APA OR OTHER CITATION]"> -->
+          <!--         Copy citation -->
+          <!--       </button> -->
+          <!--     </div> -->
+          <!--   </div> -->
+          <!-- </article> -->
+          <!---->
+          <!-- <article class="publication" data-type="conference"> -->
+          <!--   <div class="publication-year">[2025]</div> -->
+          <!--   <div> -->
+          <!--     <p class="publication-type">Conference paper</p> -->
+          <!--     <h3>[Title of conference paper]</h3> -->
+          <!--     <p class="publication-authors"> -->
+          <!--       [Co-author One], <strong>[Your Name]</strong>, [Co-author Two] -->
+          <!--     </p> -->
+          <!--     <p class="publication-venue">[Conference Name], [Location]</p> -->
+          <!--     <div class="publication-links"> -->
+          <!--       <a href="[PAPER URL]">Paper</a> -->
+          <!--       <a href="[SLIDES URL]">Slides</a> -->
+          <!--       <a href="[VIDEO URL]">Video</a> -->
+          <!--       <button class="copy-citation" type="button" data-citation="[FULL CITATION]"> -->
+          <!--         Copy citation -->
+          <!--       </button> -->
+          <!--     </div> -->
+          <!--   </div> -->
+          <!-- </article> -->
+          <!---->
+          <!-- <article class="publication" data-type="preprint"> -->
+          <!--   <div class="publication-year">[2025]</div> -->
+          <!--   <div> -->
+          <!--     <p class="publication-type">Preprint</p> -->
+          <!--     <h3>[Title of working paper or preprint]</h3> -->
+          <!--     <p class="publication-authors"><strong>[Your Name]</strong>, [Co-author]</p> -->
+          <!--     <p class="publication-venue">[arXiv / repository / under review]</p> -->
+          <!--     <div class="publication-links"> -->
+          <!--       <a href="[PREPRINT URL]">Preprint</a> -->
+          <!--       <a href="[PROJECT URL]">Project page</a> -->
+          <!--       <button class="copy-citation" type="button" data-citation="[FULL CITATION]"> -->
+          <!--         Copy citation -->
+          <!--       </button> -->
+          <!--     </div> -->
+          <!--   </div> -->
+          <!-- </article> -->
         </div>
 
-        <p class="editing-note">
-          Duplicate a publication block in <code>index.html</code> to add more items.
-          Change its <code>data-type</code> to journal, conference, or preprint.
-        </p>
       </div>
     </section>
 
@@ -521,7 +513,7 @@
             <h3>Lead students to discover the answer for themselves rather than providing a solution</h3>
           </div>
           <p>
-            Add a short paragraph explaining how you support inclusive learning,
+            [TODO]Add a short paragraph explaining how you support inclusive learning,
             participation, feedback, assessment, or research-led teaching.
           </p>
         </div>
@@ -560,12 +552,12 @@
           <p class="section-kicker">Get in touch</p>
           <h2>Contact</h2>
           <p class="contact-intro">
-            I welcome enquiries about [COLLABORATION TOPICS], research visits,
+            [TODO] I welcome enquiries about [COLLABORATION TOPICS], research visits,
             invited talks, and teaching.
           </p>
         </div>
         <div class="contact-details">
-          <a href="mailto:[EMAIL]">[EMAIL]</a>
+          <a href="mailto:[EMAIL]">d.e.hayden@reading.ac.uk</a>
           <p>Computer Science<br />University of Reading<br />RG6 6UR</p>
           <div class="identity-links">
             <a href="https://orcid.org/[YOUR-ORCID]">ORCID</a>
@@ -579,10 +571,10 @@
 
   <footer class="site-footer">
     <div class="container footer-content">
-      <p>© <span id="current-year"></span> [YOUR NAME].</p>
+      <p>© <span id="current-year"></span> David Hayden.</p>
       <p>
         Built for GitHub Pages ·
-        <a href="https://github.com/[YOUR-GITHUB-USERNAME]/[REPOSITORY-NAME]">
+        <a href="https://github.com/DavidEHayden/davidehayden.github.io">
           View source
         </a>
       </p>
