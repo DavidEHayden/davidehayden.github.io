@@ -15,7 +15,7 @@ This is a responsive, single-page academic website designed for a PhD student. I
 
 - `index.html` — page structure and all placeholder content
 - `styles.css` — design, mobile layout, dark mode, and print styles
-- `script.js` — mobile navigation, theme toggle, publication filtering, and citation copying
+- `scripts.js` — mobile navigation, theme toggle, publication filtering, and citation copying
 
 ## Replace the placeholders
 
@@ -88,7 +88,7 @@ href="cv.pdf"
    your-github-username.github.io
    ```
 
-2. Upload `index.html`, `styles.css`, `script.js`, and any images or PDFs.
+2. Upload `index.html`, `styles.css`, `scripts.js`, and any images or PDFs.
 3. Commit the files to the repository's default branch.
 4. Open:
 
